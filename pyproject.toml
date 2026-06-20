@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linkgate-bypass"
+version = "0.1.0"
+description = "Resolve the real destination behind ad-gate link shorteners without clicking ads or trackers"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "nekodu" }]
+keywords = ["cloudflare", "turnstile", "url-unshortener", "web-automation", "security"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+]
+dependencies = [
+    "patchright>=1.40",
+    "seleniumbase>=4.40",
+    "pyautogui>=0.9.54",
+    "python-xlib>=0.33",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+linkgate-bypass = "linkgate.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/nekodu/linkgate-bypass"
+Issues = "https://github.com/nekodu/linkgate-bypass/issues"
+
+[tool.setuptools.packages.find]
+include = ["linkgate*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

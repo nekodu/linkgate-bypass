@@ -1,0 +1,33 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.python-version
+*.egg-info/
+
+# Playwright / SeleniumBase
+playwright-report/
+test-results/
+
+# OS
+.DS_Store
+
+# === SECRETS — never commit ===
+# Proxy credentials live only here.
+.env
+
+# SeleniumBase auto-generates a proxy-auth browser extension that embeds the
+# proxy username/password in plaintext. Never commit this directory.
+downloaded_files/
+
+# Persistent browser profile (cookies, captcha clearance, fingerprint state).
+.profile/
+
+# Reverse-engineering dumps contain per-session CSRF/visitor tokens.
+# Findings are summarized in docs/, the raw dump stays local.
+docs/gate-dump/
+
+# Local scratch
+/tmp/
+*.log
