@@ -1,5 +1,9 @@
 # linkgate-bypass
 
+[![CI](https://github.com/nekodu/linkgate-bypass/actions/workflows/ci.yml/badge.svg)](https://github.com/nekodu/linkgate-bypass/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](pyproject.toml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
 Findet das echte Ziel hinter einem "Ad-Gate"-Linkverkürzer (der
 adlinkfly-/aylink-Familie) heraus, ohne Werbung anzuklicken, Tracker auszulösen
 oder einen Browser deinen Bildschirm übernehmen zu lassen.
